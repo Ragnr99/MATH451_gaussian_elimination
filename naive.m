@@ -37,7 +37,12 @@ b = [1;
 
 for(j = 1 : n - 1)
     for(i = j + 1 : n)
-
+        
+        if(A(j, j) == 0) 
+            disp("Error: div by zero")
+            return
+        end
+            
         m = A(i, j)/A(j, j)
         
         for(k = j : n)
